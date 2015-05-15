@@ -5,6 +5,12 @@
 Just drop the `map` directory into your theme folder.
 Then in your `functions.php` file, just put `include('map/map.php')`
 
+Use shortcodes in page/post:
+
+[wpmap_map]
+[wpmap_directions_input]
+[wpmap_directions]
+
 You can use a Google Maps API V3 Sample to search for your destination:
 http://gmaps-samples-v3.googlecode.com/svn/trunk/geocoder/getlatlng.html
 
