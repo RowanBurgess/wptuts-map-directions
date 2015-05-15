@@ -42,7 +42,9 @@ function wpmap_map(){
     wp_register_script('google-maps', 'http://maps.google.com/maps/api/js?sensor=false');
     wp_enqueue_script('google-maps');
 
-    wp_register_script('wptuts-custom', get_template_directory_uri() . '/map/map.js', '', '', true);
+    //wp_register_script('wptuts-custom', get_template_directory_uri() . '/map/map.js', '', '', true);
+    wp_register_script('wptuts-custom', get_stylesheet_directory_uri() . '/map/map.js', '', '', true);
+    
     wp_enqueue_script('wptuts-custom');
 
     $output = sprintf(('<div id="map-container" data-map-infowindow="%s" data-map-zoom="%s"></div>'),
@@ -62,7 +64,8 @@ function wpmap_directions(){
     return $output;
 
 }
-add_shortcode('wpmap_directions_container', 'wpmap_directions');
+//add_shortcode('wpmap_directions_container', 'wpmap_directions');
+add_shortcode('wpmap_directions', 'wpmap_directions');
 
 function wpmap_directions_input(){
 
